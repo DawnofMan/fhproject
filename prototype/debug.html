@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Twin</title>
+</head>
+<body style="background-color:rgba(246, 250, 249, 0.986);">
+
+<!-- To invoke the Screen Adapter -->
+<div id="emb_container">
+    <div style="white-space: pre; font: 22px monospace; line-height: 22px"></div>
+    <canvas style="display: none"></canvas>
+
+</div>
+ <br>
+   <input type="text" id="loadPath" style="height: 10px;" value="/mnt/" />
+    <label>
+      <img title="Upload files" src="pictures/upload.png"><input type="file" id="files" multiple style="visibility:hidden;width:3px; height:3px;" name="files[]" onchange="OnUploadFiles(this.files)">
+    </label>
+    	
+ <br><br>
+<!-- Copyright -->
+<div id="copyright">&copy; 2021 Prasath Manickam - Sprecher Automation GmbH</div>  
+    <br><br>
+    <div id="logo">
+		<img src="pictures/SPA_Logo.png" width="200" height="60" alt="Sprecher Automation GmbH logo">
+	</div>
+
+
+    <!--<a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mx-lg-4" href="https://github.com">
+        
+  </a>-->
+</body>
+
+<script src="build/libv86.js"></script>
+<script src="libdt.js"></script>
+
+<!--<textarea readonly rows=25 cols=60 id="log">Waiting for boot ...
+</textarea>-->
+
+<!--<textarea readonly rows=25 cols=60 id="terminal"></textarea>-->
+
+</html>
+
+
+
