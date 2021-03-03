@@ -1,0 +1,19 @@
+https://geekflare.com/run-linux-from-a-web-browser/
+
+TEchnical understanding - https://www.masswerk.at/jsuix/jsuix-documentation.txt
+
+https://dl.acm.org/doi/10.1145/3093336.3037727
+
+
+https://github.com/michaelforney/tinyemu - Emulator example
+Booting process - https://www.youtube.com/watch?v=7D4qiFIosWk
+https://www.youtube.com/watch?v=DV5S_ZSdK0s
+
+Browsix - https://web.cs.umass.edu/publication/docs/2016/UM-CS-2016-004.pdf
+
+Buildroot vs Yocto - https://www.ginzinger.com/de/techtalk/artikel/yocto-vs-buildroot-141/
+
+Qt creator Linux -https://lists.qt-project.org/pipermail/qt-creator/2016-November/006201.html
+
+Kernel development in QT - https://meaningfulengineer.com/Kernel-developemnt-in-QtCreator/
+
