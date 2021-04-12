@@ -1,0 +1,9 @@
+#Manually created interface file
+
+auto lo                                                          
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 172.17.0.2/16
+gateway 172.17.255.255

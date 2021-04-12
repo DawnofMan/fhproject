@@ -1,0 +1,22 @@
+00:00.0 Class 0600: 8086:1237  chipset Pentium pro https://en.wikipedia.org/wiki/Intel_440FX                                 
+00:12.0 Class 0300: 1234:1111   QEMU Virtual Video Controller                                        
+00:05.0 Class 0200: 10ec:8029   ne2k driver https://linux-hardware.org/index.php?id=pci:10ec-8029                                   
+00:01.0 Class 0601: 8086:7000   ISA bridge                          
+
+
+00:00.0 Class 0600: chipset Pentium pro https://en.wikipedia.org/wiki/Intel_440FX
+00:12.0 Class 0300: 1234:1111 QEMU Virtual Video Controller 
+00:06.0 Class 0002: 1af4:1049 Virtio filesystem https://pci-ids.ucw.cz/read/PC/1af4/1049
+00:05.0 Class 0200: 10ec:8029 ne2k-pci - Realtek E2000 compatible Ethernet Controller for PCI interface 
+00:01.0 Class 0601: 8086:7000 Intel PCI-to-ISA bridge function
+
+
+https://wiki.debian.org/NetworkConfiguration
+auto eth0
+iface eth0 inet static
+address 172.17.0.2/16
+gateway 172.17.255.255
+
+
+10.5.249.33/16 
+10.5.255.255
