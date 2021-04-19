@@ -1,0 +1,145 @@
+
+body {
+    background-color:whitesmoke;
+}
+
+h1 {
+    color:darkred;
+    font-variant:unset
+}
+
+#github {
+    position:relative;
+    top: -50px;
+    left: 500px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    color: black;
+    font-stretch: expanded;
+    font-style: oblique;
+}
+
+#logo{
+    float:inline-start;
+    top: 100px;
+    width: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    padding-bottom: 0px;
+}
+
+#copyright{
+  float: after;
+  top: 100px;
+  width: 1000px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  padding-bottom: 0px;
+}
+
+#dt_filesystem {
+   position: absolute;
+   top: 5%;
+   width: 300px;
+   height: 150px;
+   margin-bottom: 0px;
+   margin-left: 1100px;
+   padding-bottom: 0px;
+}
+
+#dt_filesystem {
+    font-family: Tahoma;
+    font-size: 15px;
+    border: 1px solid #333;
+    background-color: rgb(58, 56, 56);
+    padding: 4px;
+    color: #fff;
+}
+
+.dt_window {
+    /* position: absolute;
+    top: 500px; */
+    line-clamp:inherit;
+    line-height: 2;
+    display:grid;
+    grid-template-columns: 55%;
+}
+
+.dt_taskbar {
+    position: absolute;
+    top: 0px;
+    background-color: rgb(62, 191, 206);
+    border:2px solid rgb(5, 5, 5);
+    padding: 30px;
+    width: 55%;
+    height: 30px;  
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+.dt_taskbar span {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+  #webserver {
+    position: absolute;
+    right: 200px;
+    width: 20%;
+    height: 300px;
+  }
+
+#dt_container {
+  position: absolute;
+  float: left;
+  top: 60px;
+}
+
+#dt_console {
+  position: absolute;
+  top: 550px;
+  height: 500px;
+  width: 60%;
+ } 
+
+#dt_upload { 
+    display: none; 
+}
+
+#dt_downpath {
+  line-height: 0;
+  position:absolute;
+  width: 275px;
+}
+
+::placeholder {
+  color: black;
+}
+
+#tarea {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#dt_frame {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  height: 400px;
+  width: 600px;
+}
+
+#filesys {
+  position:absolute;
+  top: 0px;
+  right: 300px;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

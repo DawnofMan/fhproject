@@ -1,0 +1,31 @@
+{
+  "name": "digitaltwin",
+  "version": "1.0.0",
+  "description": "An Embedded Linux system in the browser",
+  "main": "index.html",
+  "scripts": {
+    "wget-nohost-sw": "wget https://unpkg.com/nohost/dist/nohost-sw.js -O dist/nohost-sw.js",
+    "postwget-nohost-sw": "wget https://unpkg.com/nohost/dist/nohost-sw.map -O dist/nohost-sw.map",
+    "build": "parcel src/index.html",
+    "postbuild": "npm run wget-nohost-sw"
+  },
+  "author": "Prasath Manickam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "filer": "^1.2.0",
+    "material-design-icons": "^3.0.1",
+    "parcel": "*",
+    "regenerator-runtime": "^0.13.7",
+    "v86": "github:humphd/v86#filer-9p-lastknowngood",
+    "xterm": "^4.11.0",
+    "xterm-addon-fit": "^0.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "drag-drop": "^4.2.0",
+    "parcel-bundler": "^1.12.3",
+    "workbox-window": "^4.2.0"
+  }
+}

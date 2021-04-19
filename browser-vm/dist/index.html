@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Prasath Manickam">
+  <meta name="description" content="Master thesis, FH Hagenberg">
+  <meta name="Sprecher" content="mailto+prasath.manickam@sprecher-automation.com">
+  <title>Digital Twin</title>
+
+  <link rel="stylesheet" href="/style.e308ff8e.css">
+  <link rel="shortcut icon" href="/favicon.65e4876b.png">
+  <link rel="stylesheet" href="/xterm.470b3c38.css">
+  <link rel="stylesheet" href="/material-icons.8e1848f5.css">
+  <!-- <script src="../node_modules/xterm/lib/xterm.js"></script> -->
+<script src="/style.e308ff8e.js"></script><script src="/xterm.470b3c38.js"></script><script src="/material-icons.8e1848f5.js"></script></head>
+
+<body>
+ 
+ <!-- Menubar -->
+         <div class="dt_window">
+          <div class="dt_taskbar">
+              <span id="dt_poweron" class="material-icons md-60" title="Power On">power_settings_new</span>
+              <span id="dt_restart" class="material-icons md-60" title="Restart">refresh</span>
+              <label>
+                <span class="material-icons md-60" title="Upload">file_upload</span><input type="file" multiple="" id="dt_upload">
+              </label>
+              <label>
+                <input type="text" id="dt_downpath" placeholder="/mnt/readme.txt -> /readme.txt & ENTER">
+              </label>
+              <!-- <span id="dt_download" class="material-icons md-60" title="Download">file_download</span> -->
+            </div>
+      </div>
+     <br><br>
+
+  <!-- To invoke the Screen Adapter -->
+  <div id="dt_container">
+    <div style="white-space: pre; font: 18px monospace; line-height: 18px"></div>
+    <canvas style="display: none"></canvas>
+  </div>
+  <br><br>
+    <button id="start_emulation" hidden="">Start Emulation</button>
+<br><br>
+
+<!-- <h3>Serial console to interact with the Digital Twin</h3> -->
+<div id="dt_console"></div>
+   <!-- <div class="app-window">
+    <div class="taskbar">
+        <i id="browser-back" title="Back" class="material-icons md-48">arrow_back</i>
+        <i id="browser-forward" title="Forward" class="material-icons md-48">arrow_forward</i>
+        <i id="browser-refresh" title="Refresh" class="material-icons md-48">refresh</i>
+        <i id="browser-home" title="Home" class="material-icons md-48">home</i>
+    </div>
+    <iframe id="nohost-server"></iframe>
+</div>
+<br><br> -->
+
+  <!-- Copyright -->
+  <!-- <div id="copyright">&copy; 2021 Prasath Manickam - Sprecher Automation GmbH</div><br> -->
+  <!-- <div id="logo">
+    <img src="pictures/SPA_Logo.png" width="230" height="60" alt="Sprecher Automation GmbH logo">
+  </div> -->
+  <!-- <div id="github">
+    <a href="https://github.com/DawnofMan/fhproject/tree/Developer">
+      <img alt="GitHub" src="/pictures/github-logo.png" width="40" height="40">
+    </a>
+  </div> -->
+
+  <!-- Serial Console -->
+  <!-- <textarea readonly rows=25 cols=60 id="dt_serial"></textarea>  -->
+
+  <!-- FileSystem -->
+  <!-- <div id="dt_filesystem">
+    <label>Upload files to DT:<br><br>
+      <input type="file" id="uploadfs" multiple>
+    </label>
+    <br><br>
+    <label>Download files from DT:<br><br>
+      <input type="text" id="downloadfs" placeholder="/mnt/.../">
+    </label>
+  </div> -->
+  <!-- <iframe id="dt_frame" src="" title="This is an input from Digital Twin!!"></iframe> -->
+
+  <p id="filesys">filesystem at <a href="/fs">/fs</a></p>
+  <iframe src="http://localhost:1234/fs" id="webserver"></iframe> 
+  <script src="/app.c328ef1a.js"></script>
+</body>
+
+</html>
