@@ -1,0 +1,12 @@
+        ServerName localhost
+        #DocumentRoot /var/www/html/build
+
+        ProxyRequests on
+        RequestHeader set X-Forwarded-Proto "http"
+        ProxyPass / http://localhost:8080
+        ProxyPassReverse / http://localhost:8080
+
+        RewriteEngine on
+        RewriteCond %{HTTP:UPGRADE} ^WebSocket$ [NC]
+        RewriteCond %{HTTP:CONNECTION} ^Upgrade$ [NC]
+        RewriteRule .* ws://localhost:8080%{REQUEST_URI} [P]
