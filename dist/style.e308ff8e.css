@@ -1,0 +1,160 @@
+
+body {
+    background-color:whitesmoke;
+}
+
+h1 {
+    color:darkred;
+    font-variant:unset
+}
+
+#github {
+    position:relative;
+    top: -50px;
+    left: 500px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    color: black;
+    font-stretch: expanded;
+    font-style: oblique;
+}
+
+#logo{
+    float:inline-start;
+    top: 100px;
+    width: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    padding-bottom: 0px;
+}
+
+#copyright{
+  float: after;
+  top: 100px;
+  width: 1000px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  padding-bottom: 0px;
+}
+
+/* #vm_filesystem {
+   position: absolute;
+   top: 5%;
+   width: 300px;
+   height: 150px;
+   margin-bottom: 0px;
+   margin-left: 1100px;
+   padding-bottom: 0px;
+} */
+
+/* #vm_filesystem {
+    font-family: Tahoma;
+    font-size: 15px;
+    border: 1px solid #333;
+    background-color: rgb(58, 56, 56);
+    padding: 4px;
+    color: #fff;
+} */
+
+.nav_window {
+    line-clamp:inherit;
+    line-height:3em;
+    line-break: auto;
+    display:block;
+}
+
+.nav_taskbar {
+    position: absolute;
+    top: 0px;
+    background-color: rgb(62, 191, 206);
+    border:2px solid rgb(5, 5, 5);
+    padding: 30px;
+    width: 98%;
+    height: 35px;  
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+.nav_taskbar span {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+#vm_info {
+  position: absolute;
+  top: 61px;
+  right: 650px;
+  color:white;
+  display:block;
+  padding: 35px;
+  height: 280px;
+  width: 200px;
+  text-align:left;
+  background-color:black;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+}
+
+#vm_container {
+  position: absolute;
+  /* float: left; */
+  top: 63px;
+  height: 600px;
+  width: 55%;
+}
+
+#vm_console {
+  position: absolute;
+  top: 515px;
+  height: 500px;
+  width: 52%;
+ } 
+
+#vm_upload { 
+    display: none; 
+}
+
+#vm_load_snapshot { 
+  display: none; 
+}
+
+#vm_downpath {
+  line-height: 20px;
+  position:absolute;
+  width: 275px;
+  top: 15px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+
+/* #vm_frame {
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  height: 400px;
+  width: 600px;
+} */
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

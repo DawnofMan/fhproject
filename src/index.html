@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Prasath Manickam">
+  <meta name="description" content="Master thesis, FH Hagenberg">
+  <meta name="Sprecher" content="mailto+prasath.manickam@sprecher-automation.com" />
+  <title>Digital Twin</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./pictures/favicon.png">
+  <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css">
+  <link rel="stylesheet" href="../node_modules/material-design-icons/iconfont/material-icons.css" />
+</head>
+
+<body>
+ 
+  <header>
+    <!-- Navigation window -->
+    <div class="nav_window">
+      <div class="nav_taskbar">
+        <span id="vm_poweron" class="material-icons md-60" title="Power On">power_settings_new</span>
+        <span id="vm_restart" class="material-icons md-60" title="Restart">refresh</span>
+        <span id="vm_take_snapshot" class="material-icons md-60" title="Take snapshot">save</span>
+        <label>
+            <span class="material-icons md-60" title="Load snapshot">input</span><input type="file" id="vm_load_snapshot" />
+         </label>
+        <label>
+          <span class="material-icons md-60" title="Upload data">file_upload</span><input type="file" multiple
+            id="vm_upload" />
+        </label>
+        <label>
+          <input type="text" id="vm_downpath" placeholder="/mnt/readme.txt -> /readme.txt & ENTER" />
+        </label>
+      </div>
+    </div>
+    <br><br>
+  </header>
+
+  <div class="main">
+    <!-- To invoke the Screen Adapter -->
+    <div id="vm_container">
+      <div style="white-space: pre; font: 18px monospace; line-height: 18px"></div>
+      <canvas style="display: none"></canvas> 
+    </div>
+
+    <div id="vm_info">
+      <p class="blink" style="color:crimson;font-size:18px;"><strong>Press &nbsp; <span
+            class="material-icons md-60">power_settings_new</span> &nbsp; to start VM!!!</strong><br><br></p>
+      <strong>VM Info: </strong> <br><br>
+      Up time: <span id="running_time">0</span> s <br>
+      Speed: <span id="speed">0</span> mIPS <br>
+      Avg Speed: <span id="avg_speed">0</span> mIPS <br><br>
+      <strong>Network Info: </strong><br><br>
+      Bytes received: <span id="info_network_bytes_received">0</span><br>
+      Bytes transmitted: <span id="info_network_bytes_transmitted">0</span><br>
+      <br>
+    </div>
+
+    <!-- To enable the Serial Console -->
+    <div id="vm_console"></div>
+  </div>
+
+  <footer>
+    <!-- Copyright -->
+    <!-- <div id="copyright">&copy; 2021 Prasath Manickam - Sprecher Automation GmbH</div><br> -->
+    <!-- <div id="logo">
+    <img src="pictures/SPA_Logo.png" width="230" height="60" alt="Sprecher Automation GmbH logo">
+  </div> -->
+    <!-- <div id="github">
+    <a href="https://github.com/DawnofMan/fhproject/tree/Developer">
+      <img alt="GitHub" src="/pictures/github-logo.png" width="40" height="40">
+    </a>
+  </div> -->
+  </footer>
+
+  <!-- <iframe id="dt_frame" src="" title="This is an input from Digital Twin!!"></iframe> -->
+
+  <!-- <p id="filesys">filesystem mounted in /mnt <a href="/fs">browse</a></p> -->
+  <!-- <iframe src="http://localhost:1234/fs" id="webserver"></iframe>  -->
+  <script src="index.js"></script>
+  <script src="./libv86.js"></script>
+</body>
+
+</html>
