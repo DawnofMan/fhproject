@@ -58,10 +58,12 @@ const startDigitalTwin = () => {
           emulator.restore_state(e.target.result);
           emulator.run();
         } else {
-          emulatorDefaultParams.initial_state = { e.target.result };
-          hardBoot(xterm, emulatorDefaultParams);
+          //var vmState = e.target.result;
+          const params = Object.create(emulatorDefaultParams);
+          //params.initial_state = { 'e.target.result' } ;
+          console.log('parm' + emulatorDefaultParams);
+          hardBoot(xterm, params);
         }
-         
       };
       reader.readAsArrayBuffer(e.target.files[0]);
     });
@@ -86,7 +88,7 @@ const startDigitalTwin = () => {
 const coldBoot = async xterm => {
   console.log('cold boot called');
   emulator = new V86Starter(emulatorDefaultParams);
- // setVMStatus(emulator);
+  setVMStatus(emulator);
   await checkBootCompletion(emulator, xterm);
   //filesystem.welcome(emulator);
   setWelcomeScreen(emulator, xterm);
@@ -112,34 +114,36 @@ const setVMStatus = emulator => {
     bytesTrasmitted: 0,
     bytesReceived: 0,
   };
-  var lastCount = 0;
+  var lastTick = 0;
   var uptime = 0;
-  var lastCount = 0;
+  var lastInstrCount = 0;
   var totalInstructions = 0;
-
 
   emulator.add_listener("emulator-started", function()
   {
-    now = Date.now();
+    var start = Date.now();
     var instructionCount = emulator.get_instruction_counter();
     console.log('instru conu ' + instructionCount);
-            if(instructionCount < lastCount)
+            if(instructionCount < lastInstrCount)
             {
                 // 32-bit wrap-around
-                lastCount -= 0x100000000;
+                lastInstrCount -= 0x100000000;
             }
 
-            var last_ips = instructionCount - lastCount;
-            lastCount = instructionCount;
+            var last_ips = instructionCount - lastInstrCount;
+            lastInstrCount = instructionCount;
             totalInstructions += last_ips;
 
-            var delta_time = now - lastTick;
+            var delta_time = start - lastTick;
+            //console.log('delta' + delta_time);
             uptime += delta_time;
-            lastTick = now;
+            //console.log('up' + uptime);
+            lastTick = start;
+   
    setInterval(function()
-   {
-       document.querySelector('#uptime').textContent = Math.round((Date.now() - now) / 1000);
-   }, 999);
+    {
+       document.querySelector('#uptime').textContent = format_timestamp((Date.now() - start) / 1000 | 0);
+    }, 999);
    setInterval(function()
    {
        document.querySelector('#speed').textContent = (last_ips / 1000 / delta_time).toFixed(1);
@@ -148,7 +152,6 @@ const setVMStatus = emulator => {
    {
        document.querySelector('#avg_speed').textContent = (totalInstructions / 1000 / uptime).toFixed(1);
    }, 999);
-
 });
 
       emulator.add_listener("eth-receive-end", function(args)
@@ -212,6 +215,23 @@ const setWelcomeScreen = (emulator, xterm) => {
    emulator.add_listener('serial0-output-char', char => xterm.write(char));
    xterm.clear();
 };
+
+const format_timestamp = time => {
+  if(time < 60)
+        {
+            return time + "s";
+        }
+        else if(time < 3600)
+        {
+            return (time / 60 | 0) + "m " + (time % 60) + "s";
+        }
+        else
+        {
+            return (time / 3600 | 0) + "h " +
+                ((time / 60 | 0) % 60) + "m " +
+                (time % 60) + "s";
+        }
+    }
 
 module.exports.startDigitalTwin = startDigitalTwin;
 
