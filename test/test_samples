@@ -1,0 +1,20 @@
+Healthy
+V1,V2,V3-L-N 57.7
+I1,I2,I3 - 1 
+Phase 0, 240,120
+Frequency 50
+magntiude
+100V
+1A
+
+
+Phi - phase 
+
+0,100,100 - 2,1,1
+10,10,100 - 5,5,1
+10,10,10 - 10,10,10
+
+Frequency
+single phase fault
+
+double phase fault
